@@ -1,0 +1,59 @@
+$br: 1rem;
+$w: 600px;
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: $w;
+  margin-left: auto;
+  margin-right: auto;
+  padding: $br;
+
+  > .row {
+    padding-bottom: $br;
+  };
+}
+
+#qrcode, #image {
+  width: 100%;
+  max-width: $w;
+  height: $w;
+
+  > * {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+#qrcode {
+  display: none;
+}
+
+label {
+  display: flex;
+}
+
+input, button {
+  border-width: 1px;
+  border-style: solid;
+  padding: 0.5rem $br;
+}
+
+input[type="text"], input[type="url"] {
+  width: 100%;
+  border-right: none;
+  border-radius: $br 0 0 $br;
+}
+
+button {
+  border-radius: 0 $br $br 0;
+}
